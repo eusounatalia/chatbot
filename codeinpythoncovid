@@ -1,0 +1,57 @@
+#entrada de dados para interação com o usuario
+
+nome = input('Digite eu some:')
+
+print('\nOlá,'+nome+' Que bom que você entrou em contato com a gente.\n')
+
+print('A Covid-19 é uma infecção respiratória aguda causada pelo coronavírus SARS-CoV-2, potencialmente grave, de elevada transmissibilidade e de distribuição global.\n')
+
+#por ter apenas 2 opcoes será feita por condicao criando uma variável
+
+digite =int(input('[1] se vc apresenta sintomas\n[2] se vc quer mais informações sobre a doença.\n'))
+
+#dentro do if será criado uma def ou discionário para que funcione como switch case
+if digite == 1:
+  print('Os sintomas abaixo estão por ordem de intensidade. Digite o seu sintoma mais grave até agora:\n\n[1] tosse e/ou dor de garganta\n[2] febre persistente\n[3] dispneia/desconforto respiratório\n[4] insuficiência respiratória grave\n')
+  def opcao_1():
+    print("LEVE: Caracterizado a partir da presença de sintomas        não específicos, como tosse, dor de garganta ou coriza, seguido ou não de            anosmia, ageusia, diarreia, dor abdominal, febre, calafrios, mialgia, fadiga         e/ou cefaleia.\n Lembrando que é importante fazer o teste em qualquer unidade de     saúde para iniciar o tratamento corretamente.")    
+
+  def opcao_2():
+    print("MODERADO: Os sintomas mais frequentes podem incluir desde sinais leves da doença, como tosse persistente e febre persistente diária, até sinais de piora progressiva de outro sintoma relacionado à covid-19 (adinamia, prostração, hiporexia, diarreia), além da presença de pneumonia sem sinais ou sintomas de gravidade\nLembrando que é importante fazer o teste em qualquer unidade de saúde para iniciar o tratamento corretamente.")    
+
+  def opcao_3():
+    print("GRAVE: Considera-se a Síndrome Respiratória Aguda Grave (Síndrome Gripal que apresente dispneia/desconforto respiratório ou pressão persistente no tórax ou saturação de oxigênio menor que 95% em ar ambiente ou coloração azulada de lábios ou rosto). Para crianças, os principais sintomas incluem taquipneia (maior ou igual a 70 rpm para menores de 1 ano e maior ou igual a 50 rpm para crianças maiores que 1 ano), hipoxemia, desconforto respiratório, alteração da consciência, desidratação, dificuldade para se alimentar, lesão miocárdica, elevação de enzimas hepáticas, disfunção da coagulação, rabdomiólise, cianose central ou SpO2 <90-92% em repouso e ar ambiente, letargia, convulsões, dificuldade de alimentação/recusa alimentar.")
+
+  def opcao_4():
+    print('CRÍTICO:Os principais sintomas são sepse, síndrome do desconforto respiratório agudo, síndrome do desconforto respiratório agudo, insuficiência respiratória grave, disfunção de múltiplos órgãos, pneumonia grave, necessidade de suporte respiratório e internações em unidades de terapia intensiva.')
+
+  opcao = input('digite:\n')
+  escolha = {
+    '1': opcao_1,
+    '2': opcao_2,
+    '3': opcao_3,
+    '4': opcao_4
+  }
+
+  escolha.get(opcao)()
+  
+elif digite==2:
+  print('\n[1]Como é transmitido?\n[2]Como se proteger?\n[3]Quais são os fatores de risco?')
+  
+  def op_1():
+    print(' De acordo com as evidências mais atuais, o SARS-CoV-2, da mesma forma que outros vírus respiratórios, é transmitido principalmente por três modos: contato, gotículas ou por aerossol.\nA transmissão por contato é a transmissão da infecção por meio do contato direto com uma pessoa infectada (por exemplo, durante um aperto de mão seguido do toque nos olhos, nariz ou boca), ou com objetos e superfícies contaminados (fômites).\nA transmissão por gotículas é a transmissão da infecção por meio da exposição a gotículas respiratórias expelidas, contendo vírus, por uma pessoa infectada quando ela tosse ou espirra, principalmente quando ela se encontra a menos de 1 metro de distância da outra.\nA transmissão por aerossol é a transmissão da infecção por meio de gotículas respiratórias menores (aerossóis) contendo vírus e que podem permanecer suspensas no ar, serem levadas por distâncias maiores que 1 metro e por períodos mais longos (geralmente horas).')
+  def op_2():
+    print('Entre as medidas indicadas pelo MS, estão as não farmacológicas, como distanciamento social, etiqueta respiratória e de higienização das mãos, uso de máscaras, limpeza e desinfeção de ambientes, isolamento de casos suspeitos e confirmados e quarentena dos contatos dos casos de covid-19, conforme orientações médicas.\nAdemais, o MS recomenda ainda a vacinação contra a covid-19 dos grupos prioritários conforme o Plano Nacional de Operacionalização da Vacinação contra a Covid-19. Estas medidas devem ser utilizadas de forma integrada, a fim de controlar a transmissão do SARSCoV-2, permitindo também a retomada gradual das atividades desenvolvidas pelos vários setores e o retorno seguro do convívio social.')
+  def op_3():
+    print('Condições e fatores de risco a serem considerados para possíveis complicações da covid-19:\nIdade igual ou superior a 60 anos;\nTabagismo;\nObesidade;\nMiocardiopatias de diferentes etiologias (insuficiência cardíaca, miocardiopatia isquêmica etc.);\nHipertensão arterial;\nDoença cerebrovascular;\nPneumopatias graves ou descompensadas (asma moderada/grave, DPOC);\nImunodepressão e imunossupressão;\nDoenças renais crônicas em estágio avançado (graus 3, 4 e 5);\nDiabetes melito, conforme juízo clínico;\nDoenças cromossômicas com estado de fragilidade imunológica;\nNeoplasia maligna (exceto câncer não melanótico de pele);\nCirrose hepática;\nAlgumas doenças hematológicas (incluindo anemia falciforme e talassemia);\nGestação.')
+    
+  
+  opcao = input('digite:\n')
+  escolha = {
+    '1': op_1,
+    '2': op_2,
+    '3': op_3
+    
+  }
+
+  escolha.get(opcao)()
